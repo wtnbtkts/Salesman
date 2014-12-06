@@ -5,7 +5,7 @@ public class UITitle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		GameSetting.Init();
 	}
 	
 	// Update is called once per frame

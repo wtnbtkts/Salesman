@@ -46,11 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\src\GameSetting.cs" />
+     <Compile Include="Assets\src\TitleButton.cs" />
      <Compile Include="Assets\src\kencho\KenchoAnswer.cs" />
+     <Compile Include="Assets\src\kencho\KenchoKen.cs" />
      <Compile Include="Assets\src\kencho\KenchoMain.cs" />
      <Compile Include="Assets\src\kencho\KenchoScreen.cs" />
      <Compile Include="Assets\src\quiz\QuizAnswer.cs" />
+     <Compile Include="Assets\src\quiz\QuizExplanation.cs" />
+     <Compile Include="Assets\src\quiz\QuizMain.cs" />
      <Compile Include="Assets\src\quiz\QuizQuestion.cs" />
+     <Compile Include="Assets\src\title\TitleSalesman.cs" />
      <Compile Include="Assets\src\title\UITitle.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
