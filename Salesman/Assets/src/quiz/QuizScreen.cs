@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public enum Ken {
 	Tokyo,
@@ -12,10 +13,12 @@ public enum Ken {
 }
 
 public class QuizScreen : MonoBehaviour {
-	public GameObject mText;
+	int mQuestionCount = 0;
+	public Text mTextQuestion;
+	public Text mTextAnswer;
 	// Use this for initialization
 	void Start () {
-	
+		Init ();
 	}
 	
 	// Update is called once per frame
@@ -23,6 +26,10 @@ public class QuizScreen : MonoBehaviour {
 	
 	}
 	public void SetKen(Ken ken) {
-//		Debug.Log ("mText.gameObject.GetComponent<GUIText>().text is " + mText.gameObject.GetComponent<GUIText>().text);
+		mTextQuestion.text = QuizQuestion.get(ken, mQuestionCount);
+		mQuestionCount++;
+	}
+	void Init() {
+		mQuestionCount = 0;
 	}
 }
