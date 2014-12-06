@@ -33,7 +33,7 @@ public class QuizMain : MonoBehaviour {
 		if (button == "chiba") {
 			OnPressButton(Ken.Chiba);
 		} else if (button == "Ibaragi") {
-			OnPressButton(Ken.Ibaragi);
+			OnPressButton(Ken.Ibaraki);
 		}
 	}
 	void OnPressButton(Ken ken) {

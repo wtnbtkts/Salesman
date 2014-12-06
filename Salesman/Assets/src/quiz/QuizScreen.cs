@@ -6,7 +6,7 @@ public enum Ken {
 	Tokyo,
 	Chiba,
 	Kanagawa,
-	Ibaragi,
+	Ibaraki,
 	Saitama,
 	Gunma,
 	Tochigi,
