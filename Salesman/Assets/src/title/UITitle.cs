@@ -17,7 +17,7 @@ public class UITitle : MonoBehaviour {
 		switch(buttonId)
 		{
 		case 0:
-			Application.LoadLevel("quiz");
+			Application.LoadLevel("kencho");
 			break;
 		default:
 			break;

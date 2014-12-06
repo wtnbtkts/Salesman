@@ -16,7 +16,6 @@ public class QuizMain : MonoBehaviour {
 		float distance = 1000.0f; //光線を伸ばす距離
 
 		if (Input.GetMouseButtonDown(0)) {
-			mScreen.SetKen(Ken.Chiba);
 			//メインカメラのスクリーン上のポイントを光線に変換
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			
@@ -26,6 +25,7 @@ public class QuizMain : MonoBehaviour {
 			if (aCollider2d) {
 				GameObject obj = aCollider2d.transform.gameObject;
 				OnPressButton(obj.name);
+				Debug.Log ("obj.name is " + obj.name);
 			}
 		}
 	}

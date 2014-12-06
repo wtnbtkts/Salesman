@@ -25,6 +25,9 @@ public class QuizScreen : MonoBehaviour {
 	void Update () {
 	
 	}
+	public void PressButton() {
+		Application.LoadLevel("quiz");
+  }
 	public void SetKen(Ken ken) {
 		mTextQuestion.text = QuizQuestion.get(ken, mQuestionCount);
 		mQuestionCount++;
