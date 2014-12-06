@@ -16,7 +16,7 @@ public class QuizQuestion : MonoBehaviour {
 			return getSaitama(count);
 		case Ken.Gunma:
 			return getGunma(count);
-		case Ken.Tochigi:
+		case Ken.Tochigi: 
 			return getTochigi(count);
 		default:
 			return getChiba(count);

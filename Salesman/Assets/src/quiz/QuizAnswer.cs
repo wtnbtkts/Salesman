@@ -2,80 +2,102 @@
 using System.Collections;
 
  public class QuizAnswer : MonoBehaviour {
-
-	public static bool IsCollect(Ken ken, int count, bool isMaru) {
-		return false;
-		/*
+	public static bool IsCollect(Ken ken, int count, bool isMaru) { 
 		switch (ken) {
 		case Ken.Chiba:
-			return isMaru == true;
-		default:
-			return false;
+			return IsCollectChiba(count, isMaru);
 		case Ken.Tokyo:
-			return isMaru == "新宿","しんじゅく";
-		default:
-			return false;
+			return IsCollectTokyo(count, isMaru);
 		case Ken.Kanagawa:
-			return isMaru == "横浜","よこはま";
-		default:
-			return false;
+			return IsCollectKanagawa(count, isMaru);
 		case Ken.Ibaraki:
-			return isMaru == "水戸","みと";
-		default:
-			return false;
+			return IsCollectIbaraki(count, isMaru);
 		case Ken.Saitama:
-			return isMaru == "さいたま";
-		default:
-			return false;
+			return IsCollectSaitama(count, isMaru);
 		case Ken.Gunma:
-			return isMaru == "前橋","まえばし";
-		default:
-			return false;
+			return IsCollectGunma(count, isMaru);
 		case Ken.Tochigi:
-			return isMaru == "宇都宮","うつのみや";
+			return IsCollectTochigi(count, isMaru);
 		default:
-			return false;
+			return IsCollectChiba(count, isMaru);
 		}
-		
-	*/
-	}
-}
-
-/*
-		switch(ken) {
-		case Ken.Chiba:
-			return IsCollectChiba(count);
-		case Ken.Tokyo:
-			return getTokyo(count);
-		case Ken.Kanagawa:
-			return getKanagawa(count);
-		case Ken.Ibaraki:
-			return getIbaraki(count);
-		case Ken.Saitama:
-			return getSaitama(count);
-		case Ken.Gunma:
-			return getGunma(count);
-		case Ken.Tochigi:
-			return getTochigi(count);
-		default:
-			return getChiba(count);
-		}
-		return "私だった 2222";
 	}
 
-	public static string  IsCollectChiba(int count ,bool isMaru) {
+	public static bool IsCollectChiba(int count, bool isMaru) {
 		switch(count) {
 		case 0:
-			return(isMaru);
 		case 1:
-			return(isMaru);
 		case 2:
-			return(isMaru);
-		case 3:
-			return "東京湾アクアライン開通は2000年である";
 		default:
-			return(isMaru);
+			return isMaru;
+		case 3:
+			return !isMaru;
 		}
 	}
-	*/
-
+	public static bool IsCollectTokyo(int count, bool isMaru) {
+		switch(count) {
+		case 0:
+		case 3:
+		default:
+			return isMaru;
+		case 1:
+		case 2:
+			return !isMaru; 
+		}
+	}
+	public static  bool IsCollectKanagawa(int count, bool isMaru) {
+		switch(count) {
+		case 1:
+		case 2:
+		case 3:
+		default:
+			return isMaru;
+		case 0:
+			return !isMaru;
+		}
+	}
+	public static bool IsCollectIbaraki(int count, bool isMaru) {
+		switch(count) {
+		case 0:
+		case 2:
+		case 3:
+			return isMaru;
+		case 1:
+		default:
+			return !isMaru;
+		}
+	}
+	public static bool IsCollectSaitama(int count, bool isMaru) {
+		switch(count) {
+		case 0:
+		case 2:
+		case 3:
+		default:
+			return isMaru;
+		case 1:
+			return !isMaru;
+		}
+	}
+	public static bool IsCollectGunma(int count, bool isMaru) {
+		switch(count) {
+		case 0:
+		case 1:
+		default:
+			return isMaru;
+		case 2:
+		case 3:
+			return !isMaru;
+		}
+	}
+	public static bool IsCollectTochigi(int count, bool isMaru) {
+		switch(count) {
+		case 0:
+		case 1:
+		case 2:
+			return isMaru;
+		case 3:
+		default:
+			return !isMaru;
+		}
+	}
+}
