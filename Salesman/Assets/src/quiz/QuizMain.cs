@@ -25,13 +25,14 @@ public class QuizMain : MonoBehaviour {
 			
 			if (aCollider2d) {
 				GameObject obj = aCollider2d.transform.gameObject;
+				OnPressButton(obj.name);
 			}
 		}
 	}
 	void OnPressButton(string button) {
-		if (obj.name == "chiba") {
+		if (button == "chiba") {
 			OnPressButton(Ken.Chiba);
-		} else if (obj.name == "Ibaragi") {
+		} else if (button == "Ibaragi") {
 			OnPressButton(Ken.Ibaragi);
 		}
 	}
