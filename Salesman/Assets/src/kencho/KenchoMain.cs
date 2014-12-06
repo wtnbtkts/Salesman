@@ -14,7 +14,6 @@ public class KenchoMain : MonoBehaviour {
 		Ray ray;
 		RaycastHit hit;
 		float distance = 1000.0f; //光線を伸ばす距離
-
 		if (Input.GetMouseButtonDown(0)) {
 			//メインカメラのスクリーン上のポイントを光線に変換
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
