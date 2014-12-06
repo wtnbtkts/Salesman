@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class QuizMain : MonoBehaviour {
-	public QuizScreen mScreen;
+public class KenchoMain : MonoBehaviour {
+	public KenchoScreen mScreen;
 
 	// Use this for initialization
 	void Start () {

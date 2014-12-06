@@ -12,7 +12,7 @@ public enum Ken {
 	Tochigi,
 }
 
-public class QuizScreen : MonoBehaviour {
+public class KenchoScreen : MonoBehaviour {
 	int mQuestionCount = 0;
 	public Text mTextQuestion;
 	public Text mTextAnswer;
