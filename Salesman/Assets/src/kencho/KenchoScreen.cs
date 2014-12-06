@@ -16,6 +16,9 @@ public class KenchoScreen : MonoBehaviour {
 	int mQuestionCount = 0;
 	public Text mTextQuestion;
 	public Text mTextAnswer;
+	public GameObject mMaru;
+	public GameObject mBatsu;
+	bool mIsKenchoEnd = false;
 	// Use this for initialization
 	void Start () {
 		Init ();
@@ -26,7 +29,13 @@ public class KenchoScreen : MonoBehaviour {
 	
 	}
 	public void PressButton() {
-		Application.LoadLevel("quiz");
+		if (KenchoAnswer.IsCorrectKenchoshozaichi(GameSetting.GetKen(), mTextAnswer.text)) {
+			mMaru.SetActive(true);
+		} else {
+			mBatsu.SetActive(true);
+		}
+		mIsKenchoEnd = true;
+//		Application.LoadLevel("quiz");
   }
 	public void SetKen(Ken ken) {
 		mTextQuestion.text = QuizQuestion.get(ken, GameSetting.GetCount());
