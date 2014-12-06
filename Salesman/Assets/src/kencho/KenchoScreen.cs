@@ -29,10 +29,10 @@ public class KenchoScreen : MonoBehaviour {
 		Application.LoadLevel("quiz");
   }
 	public void SetKen(Ken ken) {
-		mTextQuestion.text = QuizQuestion.get(ken, mQuestionCount);
-		mQuestionCount++;
+		mTextQuestion.text = QuizQuestion.get(ken, GameSetting.GetCount());
+		GameSetting.AddCount();
 	}
 	void Init() {
-		mQuestionCount = 0;
+		GameSetting.ResetCount();
 	}
 }
