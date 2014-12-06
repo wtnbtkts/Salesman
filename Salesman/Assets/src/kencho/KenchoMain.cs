@@ -149,6 +149,8 @@ public class KenchoMain : MonoBehaviour {
 		}
 	}
 	void OnPressKen(Ken ken) {
+		if (GetKenObject(ken).Kencho.activeSelf) 
+			return;
 		GameSetting.SetKen(ken);
 		mScreen.ShowAfterPanel();
 		mState = State.Answer;
