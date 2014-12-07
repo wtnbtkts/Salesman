@@ -14,10 +14,10 @@ public class TitleSalesman : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 pos = Arm.transform.position;
-		if (mTime % 10 == 0) {
-			Arm.transform.position = new Vector3 (pos.x, pos.y + 10, pos.z);
-		} else if (mTime % 10 == 5) {
-			Arm.transform.position = new Vector3 (pos.x, pos.y - 10, pos.z);
+		if (mTime %  5 == 0) {
+			Arm.transform.position = new Vector3 (pos.x + 10, pos.y + 10, pos.z + 10);
+		} else if (mTime % 10 == 2) {
+			Arm.transform.position = new Vector3 (pos.x - 10, pos.y - 10, pos.z -  10);
 		}
 		Arm.transform.Rotate(new Vector3(0, 0, 1));
 
