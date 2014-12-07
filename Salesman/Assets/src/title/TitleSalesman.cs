@@ -5,6 +5,7 @@ public class TitleSalesman : MonoBehaviour {
 	public GameObject Body;
 	public GameObject Arm;
 	public GameObject Head;
+	public GameObject Back;
 	Vector3 mArmDefault;
 	Vector3 mBodyDefault;
 	int mTime;
@@ -17,6 +18,7 @@ public class TitleSalesman : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Back.transform.Rotate (new Vector3 (0, 0, 1));
 		if (mTime <= 0) { 
 			return;
 		}
