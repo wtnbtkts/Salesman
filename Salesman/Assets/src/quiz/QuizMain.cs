@@ -66,6 +66,7 @@ public class QuizMain : MonoBehaviour {
 		mQuestion.text = QuizQuestion.get ();
 		AnswerMaru.SetActive(false);
 		AnswerBatsu.SetActive(false);
+		Before.SetActive(true);
 		Explanation.gameObject.SetActive(false);
 		mState = QuizMainState.LookQuestion;
 		btnNext.SetActive(false);
