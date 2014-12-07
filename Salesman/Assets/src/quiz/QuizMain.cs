@@ -7,6 +7,7 @@ public class QuizMain : MonoBehaviour {
 	public GameObject AnswerMaru;
 	public GameObject AnswerBatsu;
 	public GameObject Explanation;
+	public GameObject Before;
 	public Text ExplanationText;
 	public GameObject MaruBatsu;
 	public GameObject btnMaru;
@@ -50,6 +51,7 @@ public class QuizMain : MonoBehaviour {
 		Explanation.gameObject.SetActive(true);
 		ExplanationText.text = QuizExplanation.get();
 		btnNext.SetActive(true);
+		Before.SetActive(false);
 		mState = QuizMainState.LookResult;
 	}
 	public void ChangeNext() {
