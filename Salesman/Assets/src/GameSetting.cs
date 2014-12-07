@@ -17,8 +17,8 @@ public class GameSetting {
 	static Ken mKen = Ken.Chiba;
 	static int mCount = 0;
 	static int mScoreStudyOneCount = 0;
-	static int mScoreStudy = 0;
-	static int mScoreRoute = 0;
+	static int mScoreStudy = 10;
+	static int mScoreRoute = 20;
 	static List<Ken> mList;
 	public static void Init() {
 		mList = new List<Ken>();
@@ -45,6 +45,7 @@ public class GameSetting {
 	}
 	public static int GetScoreStudyCount() { return mScoreStudyOneCount;}
 	public static int GetScoreStudy() { return mScoreStudy;}
+	public static int GetScoreRoute() { return mScoreRoute;}
 	public static Ken GetKen() { return mKen;}
 	public static int GetCount() { return mCount;}
 	public static bool IsKenEnd() { return mCount == 4;}
