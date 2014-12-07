@@ -10,9 +10,11 @@ public class UITitle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-	public void ChangeNextScene(int buttonId)
+		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+			Application.LoadLevel("kencho");
+		}
+  }
+  public void ChangeNextScene(int buttonId)
 	{
 		switch(buttonId)
 		{
