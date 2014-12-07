@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class UITitle : MonoBehaviour {
+	public TitleSalesman Salesman;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +13,9 @@ public class UITitle : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			Application.LoadLevel("kencho");
+		}
+		if (Input.GetMouseButtonDown(0)) {
+			Salesman.OnTap();
 		}
   }
   public void ChangeNextScene(int buttonId)
