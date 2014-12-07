@@ -16,14 +16,12 @@ public enum Ken {
 public class GameSetting {
 	static Ken mKen = Ken.Chiba;
 	static int mCount = 0;
-	static int []mKenPoint;
+	static int mScore = 0;
 	static List<Ken> mList;
 	public static void Init() {
-		mKenPoint = new int[(int)Ken.Count];
-		for (int i = 0; i < (int)Ken.Count; i++) {
-			mKenPoint[i] = 0;
-		}
 		mList = new List<Ken>();
+		mCount = 0;
+		mScore = 0;
 	}
 	public static bool ShouldInit() { return mList == null;}
 	public static void SetKen(Ken ken) {
@@ -37,6 +35,8 @@ public class GameSetting {
 	public static void ResetCount(){
 		mCount = 0;
 	}
+	public static void AddScore(int score) { mScore += score;}
+	public static int GetScore() { return mScore;}
 	public static Ken GetKen() { return mKen;}
 	public static int GetCount() { return mCount;}
 	public static bool IsKenEnd() { return mCount == 4;}
