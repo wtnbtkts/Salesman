@@ -2,46 +2,47 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public enum Ken {
-	Tokyo,
-	Chiba,
-	Kanagawa,
-	Ibaraki,
-	Saitama,
-	Gunma,
-	Tochigi,
-}
-
 public class KenchoScreen : MonoBehaviour {
 	int mQuestionCount = 0;
+	public GameObject mBeforePanel;
+	public GameObject mAfterPanel;
+	public GameObject Explanation;
 	public Text mTextQuestion;
 	public Text mTextAnswer;
+	public Text mTextExplanation;
 	public GameObject mMaru;
 	public GameObject mBatsu;
 	bool mIsKenchoEnd = false;
-	// Use this for initialization
 	void Start () {
 		Init ();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-	
 	}
-	public void PressButton() {
-		if (KenchoAnswer.IsCorrectKenchoshozaichi(GameSetting.GetKen(), mTextAnswer.text)) {
+	public void SetIsCorrest(bool isCorrect) {
+		if (isCorrect) {
 			mMaru.SetActive(true);
 		} else {
 			mBatsu.SetActive(true);
 		}
-		mIsKenchoEnd = true;
-//		Application.LoadLevel("quiz");
-  }
-	public void SetKen(Ken ken) {
-		mTextQuestion.text = QuizQuestion.get(ken, GameSetting.GetCount());
-		GameSetting.AddCount();
+	}
+	public string GetAnswer() {
+		return mTextAnswer.text;
+	}
+	public void SetExplanation() {
+		Explanation.SetActive(true);
+		mTextExplanation.text = KenchoAnswer.GetSyozaichi(GameSetting.GetKen());
+	}
+	public void ShowAfterPanel() {
+		mBeforePanel.SetActive(false);
+		mAfterPanel.SetActive(true);
 	}
 	void Init() {
 		GameSetting.ResetCount();
+		mBeforePanel.SetActive(true);
+		mAfterPanel.SetActive(false);
+		mMaru.SetActive(false);
+		mBatsu.SetActive(false);
+		Explanation.SetActive(false);
 	}
 }

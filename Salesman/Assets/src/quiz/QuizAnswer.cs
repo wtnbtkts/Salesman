@@ -2,7 +2,10 @@
 using System.Collections;
 
  public class QuizAnswer : MonoBehaviour {
-	public static bool IsCollect(Ken ken, int count, bool isMaru) { 
+	public static bool IsCollect(bool isMaru) {
+		return IsCollect(GameSetting.GetKen(), GameSetting.GetCount(), isMaru);
+	}
+	static bool IsCollect(Ken ken, int count, bool isMaru) { 
 		switch (ken) {
 		case Ken.Chiba:
 			return IsCollectChiba(count, isMaru);
@@ -23,7 +26,7 @@ using System.Collections;
 		}
 	}
 
-	public static bool IsCollectChiba(int count, bool isMaru) {
+	static bool IsCollectChiba(int count, bool isMaru) {
 		switch(count) {
 		case 0:
 		case 1:
@@ -34,7 +37,7 @@ using System.Collections;
 			return !isMaru;
 		}
 	}
-	public static bool IsCollectTokyo(int count, bool isMaru) {
+	static bool IsCollectTokyo(int count, bool isMaru) {
 		switch(count) {
 		case 0:
 		case 3:
@@ -45,7 +48,7 @@ using System.Collections;
 			return !isMaru; 
 		}
 	}
-	public static  bool IsCollectKanagawa(int count, bool isMaru) {
+	static  bool IsCollectKanagawa(int count, bool isMaru) {
 		switch(count) {
 		case 1:
 		case 2:
@@ -56,7 +59,7 @@ using System.Collections;
 			return !isMaru;
 		}
 	}
-	public static bool IsCollectIbaraki(int count, bool isMaru) {
+	static bool IsCollectIbaraki(int count, bool isMaru) {
 		switch(count) {
 		case 0:
 		case 2:
@@ -67,7 +70,7 @@ using System.Collections;
 			return !isMaru;
 		}
 	}
-	public static bool IsCollectSaitama(int count, bool isMaru) {
+	static bool IsCollectSaitama(int count, bool isMaru) {
 		switch(count) {
 		case 0:
 		case 2:
@@ -78,7 +81,7 @@ using System.Collections;
 			return !isMaru;
 		}
 	}
-	public static bool IsCollectGunma(int count, bool isMaru) {
+	static bool IsCollectGunma(int count, bool isMaru) {
 		switch(count) {
 		case 0:
 		case 1:
@@ -89,7 +92,7 @@ using System.Collections;
 			return !isMaru;
 		}
 	}
-	public static bool IsCollectTochigi(int count, bool isMaru) {
+	static bool IsCollectTochigi(int count, bool isMaru) {
 		switch(count) {
 		case 0:
 		case 1:

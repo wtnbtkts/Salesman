@@ -2,24 +2,27 @@
 using System.Collections;
 
 public class KenchoAnswer : MonoBehaviour {
-	public static bool IsCorrectKenchoshozaichi(Ken ken, string syozaichi) {
+	public static bool  IsCorrectKenchoshozaichi(Ken ken, string syozaichi) {
+		return syozaichi == GetSyozaichi(ken);
+	}
+	public static string GetSyozaichi(Ken ken) {
 		switch (ken) {
 		case Ken.Chiba:
-			return syozaichi == "ちば";
+			return "ちば";
 		case Ken.Tokyo:
-			return syozaichi == "しんじゅく";
+			return "しんじゅく";
 		case Ken.Kanagawa:
-			return syozaichi == "よこはま";
+			return "よこはま";
 		case Ken.Ibaraki:
-			return syozaichi == "みと";
+			return "みと";
 		case Ken.Saitama:
-			return syozaichi == "さいたま";
+			return "さいたま";
 		case Ken.Gunma:
-			return syozaichi == "まえばし";
+			return "まえばし";
 		case Ken.Tochigi:
-			return syozaichi == "うつのみや";
+			return "うつのみや";
 		default:
-			return false;
+			return "";
 		}
 	}
 }

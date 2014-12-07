@@ -2,7 +2,10 @@
 using System.Collections;
 
 public class QuizQuestion : MonoBehaviour {
-	public static string get(Ken ken, int count) {
+	public static string get() {
+		return get (GameSetting.GetKen(), GameSetting.GetCount());
+	}
+	static string get(Ken ken, int count) {
 		switch(ken) {
 		case Ken.Chiba:
 			return getChiba(count);
@@ -22,7 +25,7 @@ public class QuizQuestion : MonoBehaviour {
 			return getChiba(count);
 		}
 	}
-	public static string getChiba(int count) {
+	static string getChiba(int count) {
 		switch(count) {
 		case 0:
 			return "千葉県は日本で唯一500m以上の山が無い";
@@ -36,7 +39,7 @@ public class QuizQuestion : MonoBehaviour {
 			return "2011年東日本大震災の影響で県の人口が減少した";
 		}
 	}
-	public static string getTokyo(int count) {
+	static string getTokyo(int count) {
 		switch(count) {
 		case 0:
 			return "大島、三宅島、八丈島、小笠原諸島は全て東京都の管轄である";
@@ -50,7 +53,7 @@ public class QuizQuestion : MonoBehaviour {
 			return "皇居は東京都内にある";
 		}
 	}
-	public static string getKanagawa(int count) {
+	static string getKanagawa(int count) {
 		switch(count) {
 		case 0:
 			return "県内に横浜市・川崎市の2つだけ政令指定都市がある";
@@ -64,7 +67,7 @@ public class QuizQuestion : MonoBehaviour {
 			return "県内に空港が無い";
 		}
 	}
-	public static string getIbaraki(int count) {
+	static string getIbaraki(int count) {
 		switch(count) {
 		case 0:
 			return "茨城県は”いばらきけん”と読む";
@@ -78,7 +81,7 @@ public class QuizQuestion : MonoBehaviour {
 			return "霞ヶ浦は茨城県だけに属する";
 		}
 	}
-	public static string getSaitama(int count) {
+	static string getSaitama(int count) {
 		switch(count) {
 		case 0:
 			return "さいたまスーパーアリーナはさいたま市にある";
@@ -92,7 +95,7 @@ public class QuizQuestion : MonoBehaviour {
 			return "市の数40は日本の都道府県で最多である";
 		}
 	}
-	public static string getGunma(int count) {
+	static string getGunma(int count) {
 		switch(count) {
 		case 0:
 			return "群馬県から福島県へ自動車で直接行くことはできない";
@@ -106,7 +109,7 @@ public class QuizQuestion : MonoBehaviour {
 			return "1988年以降ニューイヤー駅伝は群馬県で開催されている";
 		}
 	}
-	public static string getTochigi(int count) {
+	static string getTochigi(int count) {
 		switch(count) {
 		case 0:
 			return "栃木県は内陸県である";
