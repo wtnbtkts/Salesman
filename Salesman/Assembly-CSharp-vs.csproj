@@ -56,6 +56,7 @@
      <Compile Include="Assets\src\quiz\QuizExplanation.cs" />
      <Compile Include="Assets\src\quiz\QuizMain.cs" />
      <Compile Include="Assets\src\quiz\QuizQuestion.cs" />
+     <Compile Include="Assets\src\score\ScoreMain.cs" />
      <Compile Include="Assets\src\title\TitleSalesman.cs" />
      <Compile Include="Assets\src\title\UITitle.cs" />
  <Reference Include="UnityEngine.UI">
